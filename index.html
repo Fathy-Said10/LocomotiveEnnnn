@@ -40,8 +40,9 @@
 <script>
     $(document).ready(function(){
         const scroller = LocomotiveScroll({
-            el: document.querySelector
-        })
+            el: $("[data-scroll-container]")[0],
+            smooth:true
+        });
     })
     
 </script>
