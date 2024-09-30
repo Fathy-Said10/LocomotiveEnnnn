@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <title>230924</title>
 </head>
-<body>
+<body data-scroll-container>
+
 <section class="navbar">
     <ul class="navbar-link-list">
         <li class="navbar-link">
@@ -22,29 +23,51 @@
 </section>
 
 <section class="hero" data-scroll-container>
-<div class="container-left" data-scroll-section>
-    <h1 class="hero-text" data-scroll data-scroll-speed="1">
-        KUDA PERTAMA
-    </h1>
-</div>
-<div class="container-right">
-    <div class="hero-image">
-        <img src = "bluesky.jpg" alt = "gambar langit">
+    <div class="container-left" data-scroll-section>
+        <h1 class="hero-text" data-scroll data-scroll-speed="9">
+            KUDA PERTAMA
+        </h1>
     </div>
-</div>
+    <div class="container-right">
+        <div class="hero-image">
+            <img src="bluesky.jpg" alt="gambar langit">
+        </div>
+    </div>
 </section>
 
-<script scr = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js></script>
+<!-- Section Baru 1 -->
+<section class="section-one" data-scroll-container>
+    <div class="content-left" data-scroll-section>
+        <h2 data-scroll data-scroll-speed="7">Section Baru Pertama</h2>
+        <p>Ini adalah konten dari section baru pertama. Kita bisa menambahkan teks, gambar, atau elemen HTML lainnya di sini.</p>
+    </div>
+    <div class="content-right" data-scroll-section>
+        <img src="image1.jpg" alt="Gambar untuk section baru 1" data-scroll data-scroll-speed="5">
+    </div>
+</section>
+
+<!-- Section Baru 2 -->
+<section class="section-two" data-scroll-container>
+    <div class="content-left" data-scroll-section>
+        <h2 data-scroll data-scroll-speed="6">Section Baru Kedua</h2>
+        <p>Ini adalah konten dari section baru kedua. Section ini juga menggunakan efek scroll yang halus dengan LocomotiveScroll.</p>
+    </div>
+    <div class="content-right" data-scroll-section>
+        <img src="image2.jpg" alt="Gambar untuk section baru 2" data-scroll data-scroll-speed="4">
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 <script>
     $(document).ready(function(){
-        const scroller = LocomotiveScroll({
+        const scroller = new LocomotiveScroll({
             el: $("[data-scroll-container]")[0],
-            smooth:true
+            smooth: true
         });
-    })
-    
+    });
 </script>
+
 </body>
 </html>
